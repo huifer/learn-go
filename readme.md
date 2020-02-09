@@ -10,8 +10,7 @@
 - defer机制
 - 反射(reflect)
 - 高性能HTTP Server
-- 工程管理
-- 编程规范
+
 
 ## 文档目录
 1. [初识go语言](/doc/01-认识GO.md)
