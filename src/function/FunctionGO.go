@@ -1,4 +1,4 @@
-package main
+package function
 
 import "fmt"
 
@@ -31,6 +31,36 @@ func callBackFunc(i int) {
 	fmt.Println("匿名函数回调", i)
 }
 
+/**
+闭包
+*/
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+func adderMain() {
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
+}
+
+func deferFunc() {
+	fmt.Println("start ")
+	defer fmt.Println("1")
+	defer fmt.Println("2")
+	// 最后放入位于栈顶优先执行
+	defer fmt.Println("3")
+	fmt.Println("end ")
+}
+
 func main() {
 	i := add2num(1, 2)
 	fmt.Print(i)
@@ -54,4 +84,6 @@ func main() {
 	}(1000)
 
 	callBackMain(100, callBackFunc)
+	adderMain()
+	deferFunc()
 }
