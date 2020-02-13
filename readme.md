@@ -1,4 +1,7 @@
 # GO语言学习
+<img src="/doc/assets/golang.jpg" alt="golang" style="zoom:50%;" />
+
+
 ## GO简介
 > Go语言是2007年末由Robert Griesemer,Rob Pike,Ken Thompson主持开发，之后有Ian Lance Taylor,Russ Cox等人的加入，最终于2009年11月开源发布。它是一款简单的开源编程语言，它能让构造简单、可靠且高效的软件变得容易。
 
@@ -31,3 +34,11 @@
     - 延迟执行
     - 测试函数
 4. [GO异常](/doc/04-GO异常.md)
+    - 异常的定义
+    - 自定义异常
+    - 异常捕获
+5. [GO包](/doc/05-GO包.md)
+    - 包的定义
+    - 包的导入
+    - 包的使用
+        - **首字母大写的函数才可被引用**
