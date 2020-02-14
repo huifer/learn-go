@@ -1,7 +1,8 @@
 package main
 
 import (
-	pac "learn-go/src/pac"
+	"learn-go/src/goStrings"
+	"learn-go/src/pac"
 	"learn-go/src/pac/inpac"
 	_ "learn-go/src/pac/inpac"
 )
@@ -9,4 +10,6 @@ import (
 func main() {
 	pac.Pac01()
 	inpac.Package02()
+	goStrings.Operation()
+
 }
