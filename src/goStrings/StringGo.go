@@ -34,5 +34,37 @@ func Operation() {
 
 	// 字符串拼接
 	s := text1 + "123"
-	fmt.Println()
+	fmt.Println(s)
+
+}
+
+func UseStrings() {
+	s := "abcdEfgab"
+	// 只有substr完全在s中才会返回true
+	println(strings.Contains(s, "a"))
+	// 只要部分chars 在s 中就返回true
+	println(strings.ContainsAny(s, "g "))
+
+	// 字串出现的次数
+	println(strings.Count(s, "ab"))
+
+	// 字符串分割
+	s2 := "a,b,c,d"
+	split := strings.Split(s2, ",")
+	for _, s3 := range split {
+		println(s3)
+	}
+	println("----")
+	n := strings.SplitN(s2, ",", 2)
+	for _, s3 := range n {
+		println(s3)
+	}
+	println("----")
+	// 前缀
+	println(strings.HasPrefix(s2, "a"))
+	// 后缀
+	println(strings.HasSuffix(s2, "a"))
+	// 字符串替换
+	println(strings.Replace(s2, "a", "abc", -1))
+
 }

@@ -10,6 +10,6 @@ import (
 func main() {
 	pac.Pac01()
 	inpac.Package02()
-	goStrings.Operation()
+	goStrings.UseStrings()
 
 }
