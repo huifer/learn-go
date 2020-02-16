@@ -11,4 +11,8 @@ func main() {
 	//goStrings.UseStrings()
 
 	goTime.TimeDemo()
+	goTime.TimestampDemo()
+	goTime.TimeStamp2Time()
+	goTime.TimeOperation()
+	goTime.TimeFormat()
 }
