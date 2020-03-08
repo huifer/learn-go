@@ -1,13 +1,11 @@
 package main
 
 import (
+	"learn-go/src/goIris"
 	_ "learn-go/src/structure"
-
-	"learn-go/src/collection"
 )
 
 func main() {
 
-	println()
-	collection.MapFunc()
+	goIris.RunWithIris()
 }
