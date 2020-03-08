@@ -1,18 +1,13 @@
 package main
 
 import (
-	"learn-go/src/goTime"
-	_ "learn-go/src/pac/inpac"
+	_ "learn-go/src/structure"
+
+	"learn-go/src/collection"
 )
 
 func main() {
-	//pac.Pac01()
-	//inpac.Package02()
-	//goStrings.UseStrings()
 
-	goTime.TimeDemo()
-	goTime.TimestampDemo()
-	goTime.TimeStamp2Time()
-	goTime.TimeOperation()
-	goTime.TimeFormat()
+	println()
+	collection.MapFunc()
 }
