@@ -1,11 +1,11 @@
 package main
 
 import (
-	"learn-go/src/goIris"
+	"learn-go/src/Answer"
 	_ "learn-go/src/structure"
 )
 
 func main() {
-
-	goIris.RunWithIris()
+	Answer.ArrayAnswer()
+	//goIris.RunWithIris()
 }
