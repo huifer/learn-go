@@ -1,5 +1,5 @@
 # GO语言学习
-<img src="/doc/assets/golang.jpg" alt="golang" style="zoom:50%;" />
+<img src="/doc/go_核心编程/assets/golang.jpg" alt="golang" style="zoom:50%;" />
 
 
 ## GO简介
@@ -16,28 +16,28 @@
 
 
 ## 文档目录
-1. [初识go语言](/doc/01-认识GO.md)
+1. [初识go语言](/doc/go_核心编程/认识GO.md)
     - go 简介
     - 环境搭建
     - hello world
-2. [GO语法基础](/doc/02-GO基础语法.md)
+2. [GO语法基础](/doc/go_核心编程/GO基础语法.md)
     - 数据类型
     - 变量、常量
     - 分支控制
     - 循环
     - 函数
-3. [GO函数](/doc/03-GO函数.md)
+3. [GO函数](/doc/go_核心编程/GO函数.md)
     - 函数的定义
     - 函数的调用
     - 匿名函数
     - 闭包
     - 延迟执行
     - 测试函数
-4. [GO异常](/doc/04-GO异常.md)
+4. [GO异常](/doc/go_核心编程/GO异常.md)
     - 异常的定义
     - 自定义异常
     - 异常捕获
-5. [GO包](/doc/05-GO包.md)
+5. [GO包](/doc/go_核心编程/GO包.md)
     - 包的定义
     - 包的导入
     - 包的使用

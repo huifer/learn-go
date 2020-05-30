@@ -1,6 +1,10 @@
 # GO 变量
-> 变量: 使用一个名字来绑定一块内存地址, 变量值可以修改
-> 关键字 **`var`**
+> 作者: [HuiFer](https://github.com/huifer)
+>
+> 仓库地址: https://github.com/huifer/learn-go
+
+- 变量: 使用一个名字来绑定一块内存地址, 变量值可以修改
+- 关键字 **`var`**
 ## 显式声明
 ### 完整声明
 `var varName dataType [ = value ]`
@@ -16,8 +20,8 @@
 
 ---
 # GO 常量
-> 常量: 使用一个名字来绑定一块内存地址, 常量值不能修改
-> 关键字 **`const``**
+- 常量: 使用一个名字来绑定一块内存地址, 常量值不能修改
+- 关键字 **`const``**
 ```go
 const (
  varName = true

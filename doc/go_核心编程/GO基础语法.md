@@ -43,7 +43,7 @@
 1. go : 并发语法糖关键字
 1. return : 函数返回关键字
 
-### 声明符合数据结构的关键字
+### 声明复合数据结构的关键字
 1. struct : 定义结构类型关键字
 1. interface : 定义接口类型关键字
 1. map : 声明或创建map类型关键字
@@ -162,7 +162,7 @@ const (
 
 
 ## 数据类型代码
-- [GO语言基础语法](/src/basicGrammar/GoBasicGrammar.go)
+- [GO语言基础语法](/basicGrammar/GoBasicGrammar.go)
 ```java
 package main
 
@@ -373,4 +373,4 @@ func main() {
 2. 对于数字n求阶乘
 3. 对字符串进行统计英文，空格数字有多少个
 
-- [答案](/src/Answer/BasicGrammarAnswer.go)
+- [答案](/Answer/BasicGrammarAnswer.go)

@@ -86,10 +86,10 @@ func main() {
     
 
 本文代码
-- [代码1](/src/pac)
-- [代码2](/src/PackageMain.go)
+- [代码1](/pac)
+- [代码2](/PackageMain.go)
 
 
 ## 练习
 1. 定义包`utils`,创建函数输出时间,使用包中的这个函数
-- [答案](/src/Answer/PackageAnswer.go)
+- [答案](/Answer/PackageAnswer.go)

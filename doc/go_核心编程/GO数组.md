@@ -1,4 +1,8 @@
 # GO 数组
+> 作者: [HuiFer](https://github.com/huifer)
+>
+> 仓库地址: https://github.com/huifer/learn-go
+
 ## 初始化
 - `[len]DataType`
     - len 表示数组长度
@@ -43,4 +47,4 @@ func Array() {
 1. 设置一个int类型的数组长度为10
 1. 每个元素为索引值+1
 1. 修改最后一个元素的值为100
-- [答案](/src/Answer/ArrayAnswer.go)
+- [答案](/Answer/ArrayAnswer.go)

@@ -4,7 +4,7 @@
 > 仓库地址: https://github.com/huifer/learn-go
 >
 ## 定义
-- [前文](/doc/02-GO基础语法.md)简单描述过函数如何定义以及使用,这里提出重新讲解.
+- [前文](/doc/go_核心编程/02-GO基础语法.mdO基础语法.md)简单描述过函数如何定义以及使用,这里提出重新讲解.
 - 函数的祖成包括: 函数名、返回值列表、参数列表(形参).
 - 基本函数定义如: 
 ```go
@@ -255,4 +255,4 @@ ok      lern-go/src/function    0.338s
 ## 练习
 1. 创建函数大于5输出true,其他输出false
 2. 对1进行测试
-- [答案](/src/Answer/FunctionAnswer.go)
+- [答案](/Answer/FunctionAnswer.go)

@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	Answer.ArrayAnswer()
+	Answer.SliceAnswer()
 	//goIris.RunWithIris()
 }
