@@ -22,6 +22,10 @@
         auto2top: true,
         coverpage: true,
         loadSidebar: 'summary.md',
+        alias: {
+            '/.*/.*/summary': 'summary.md',
+            '/.*/summary.md': 'summary.md'
+        },
         search: {
             maxAge: 1800000,
             paths: [
