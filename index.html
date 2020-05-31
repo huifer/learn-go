@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Learn GO</title>
@@ -11,7 +9,6 @@
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
     <link rel="stylesheet" href="//unpkg.com/docsify-dark-mode@0.6.1/dist/style.css"/>
 </head>
-
 <body>
 <div id="app">本项目由 huifer 进行开发</div>
 <script>
@@ -21,13 +18,11 @@
         maxLevel: 3,
         auto2top: true,
         coverpage: true,
-        loadSidebar: true,
         loadSidebar: 'summary.md',
         alias: {
             '/.*/.*/summary': 'summary.md',
             '/.*/summary.md': 'summary.md'
         },
-        search: auto,
         search: {
             maxAge: 1800000,
             paths: [
@@ -37,7 +32,7 @@
                 '/docs/go_web/',
                 '/',
             ],
-            depth: 6,
+            depth: 5,
         },
         pagination: {
             previousText: '上一篇',
@@ -61,5 +56,4 @@
 <script src="//unpkg.com/docsify-dark-mode@0.6.1/dist/index.js"></script>
 <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
-
 </html>

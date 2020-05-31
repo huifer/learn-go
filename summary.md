@@ -1,4 +1,4 @@
-- [基础语法](./README.md)
+- 基础语法
     - [初识GO](./docs/go_core/认识GO.md)
     - [GO基础语法](./docs/go_core/GO基础语法.md)
     - [GO变量](./docs/go_core/GO变量.md)
