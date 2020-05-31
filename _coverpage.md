@@ -1,1 +1,2 @@
-[go](/docs/go_core/assets/golang.jpg)
+# GO 语言学习
+> Author : huifer 
