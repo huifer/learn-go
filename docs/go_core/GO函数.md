@@ -13,6 +13,7 @@ func 函数名(参数列表) (返回值列表){
 }
 ```
 ## 参数列表
+
 ```go
 func add2num(x, y int) int {
 	return x + y
@@ -29,6 +30,7 @@ func main() {
 
 ## 返回值列表
 - go语言的返回值可以定义多个.
+
 ```go
 func swap2(x, y int) (int, int) {
 	return y, x
@@ -59,8 +61,11 @@ func main(){
 
 
 ## 函数传递
+
 - GO语言中函数也是变量(有点JavaScript的意思)
+
 ### 无参函数
+
 ```go
 
 func printHello(){
@@ -73,7 +78,9 @@ func main(){
 	funcValue()
 }
 ```
+
 ### 有参函数
+
 ```go
 func printHello2(string2 string) {
 	fmt.Println("hello" + string2)
@@ -86,20 +93,27 @@ func main(){
 ```
 
 ## 匿名函数
+
 - 匿名函数顾名思义,没有名字的函数就是匿名函数,匿名函数不可单独定义,需要再函数中定义
+
 ### 定义匿名函数
+
 ```go
 func (参数列表) (返回值列表){
     // 函数体
 }
 ```
+
 ```go
 	func(i int){
 		fmt.Println(i)
 	}(1000)
 ```
+
 ### 回调函数
+
 - 匿名函数可用作回调函数使用(更加像JS了...)
+
 ```go
 func callBackMain(i int, f func(int)) {
 	f(i)
@@ -120,6 +134,7 @@ func main(){
 - **闭包的价值** : 闭包的价值在于可以作为函数对象或者匿名函数，对于类型系统而言，这意味着不仅要表示数据还要表示代码。支持闭包的多数语言都将函数作为第一级对象，就是说这些函数可以存储到变量中作为参数传递给其他函数，最重要的是能够被函数动态创建和返回。
 - **使用闭包的注意点** :由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包
 - Go语言中的闭包同样也会引用到函数外的变量。闭包的实现确保只要闭包还被使用，那么被闭包引用的变量会一直存在。
+
 ```go
 
 /**
@@ -145,7 +160,9 @@ func adderMain() {
 ```
 
 ## 延迟执行 defer 
+
 - Go语言的 `defer` 语句会将其后面跟随的语句进行延迟处理，在 `defer` 归属的函数即将返回时，将延迟处理的语句按 `defer` 的逆序进行执行，也就是说，先被 `defer` 的语句最后被执行，最后被 `defer` 的语句，最先被执行。
+
 ```go
 func deferFunc() {
 	fmt.Println("start ")
@@ -158,6 +175,7 @@ func deferFunc() {
 
 ```
 - 输出结果: 
+
 ```text
 start 
 end 
@@ -168,11 +186,16 @@ end
 
 
 ## 测试函数
+
 - Go语言自带了 testing 测试包，可以进行自动化的单元测试，输出结果验证，并且可以测试性能。
+
 ### 测试规则
+
 1. 准备源码文件
 2. 命名以`_test.go`结尾,测试函数以`Test`作为方法前缀
+
 ### 单元测试
+
 ```go
 package function
 
@@ -181,7 +204,9 @@ func add4(x, y int) int {
 }
 
 ```
+
 - 测试用例
+
 ```go
 package function
 
@@ -211,7 +236,9 @@ func Test_add4(t *testing.T) {
 }
 
 ```
+
 - 测试结果
+
 ```
 === RUN   Test_add4
 === RUN   Test_add4/1+1
@@ -225,6 +252,7 @@ FAIL
 
 ### 性能测试
 - 命名规则: 以 `Benchmark`作为前缀
+
 ```go
 func BenchmarkAdd(t *testing.B){
 	for i := 0; i < t.N; i++ {
@@ -234,6 +262,7 @@ func BenchmarkAdd(t *testing.B){
 
 ```
 - 运行结果
+
 ```text
 goos: windows
 goarch: amd64

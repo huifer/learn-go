@@ -1,0 +1,1 @@
+[go](/docs/go_core/assets/golang.jpg)

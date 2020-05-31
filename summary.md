@@ -1,1 +1,6 @@
-# aaa
+- [基础语法](./docs/go_core/readme.md)
+    - [函数](./docs/go_core/GO函数.md)
+    - [GO包](./docs/go_core/GO包.md)
+- 数据库
+- web
+- 实战项目

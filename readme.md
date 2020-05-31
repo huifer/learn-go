@@ -1,5 +1,5 @@
 # GO语言学习
-<img src="/docs/go_核心编程/assets/golang.jpg" alt="golang" style="zoom:50%;" />
+<img src="/docs/go_core/assets/golang.jpg" alt="golang" style="zoom:50%;" />
 
 
 ## GO简介
