@@ -1,2 +1,2 @@
 # GO 语言学习
-> Author : huifer 
+> Author : [HuiFer](https://github.com/huifer)
