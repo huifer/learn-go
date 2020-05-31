@@ -1,7 +1,5 @@
 # GO语言学习
-<img src="/docs/go_core/assets/golang.jpg" alt="golang" style="zoom:50%;" />
-
-
+![golang](./docs/go_core/assets/golang.jpg)
 ## GO简介
 > Go语言是2007年末由Robert Griesemer,Rob Pike,Ken Thompson主持开发，之后有Ian Lance Taylor,Russ Cox等人的加入，最终于2009年11月开源发布。它是一款简单的开源编程语言，它能让构造简单、可靠且高效的软件变得容易。
 
