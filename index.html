@@ -69,7 +69,7 @@
                             .replace('raw.githubusercontent.com', 'github.com')
                             .replace(/\/master/, '/blob/master')
                     } else {
-                        url = 'https://github.com/huifer/learn-go/' + vm.route.file
+                        url = 'https://github.com/huifer/learn-go/blob/master/' + vm.route.file
                     }
                     const edit = en ? 'Edit on GitHub' : '在 GitHub 编辑'
                     const editHtml = `[:memo: ${edit}](${url})\n`
