@@ -38,6 +38,7 @@
 1. cap(slice): 返回切片底层数组容量
 1. append(slice,element) : 添加元素, 返回值是添加后的结果,slice不会修改
 1. copy(slice1,slice2): 拷贝 slice1 的值 复制给 slice2
+
 ```go
     // 内置函数
 	// 返回切片长度
@@ -53,7 +54,9 @@
 	copy(b1, b3 )
 	fmt.Println(b3)
 ```
+
 ## 数据结构 
+
 ```go
 type slice struct {
 	array unsafe.Pointer // 指针

@@ -19,6 +19,7 @@
 
 ## 包的别名
 - go 语言支持包别名定义
+
 ```go
 import (
 p1 "包名1"
@@ -30,6 +31,7 @@ p2 "包名2"
 ## 使用
 **注意: 公开的可以被别人使用的函数首字母大写**
 - 创建方
+
 ```go
 package pac
 
@@ -39,7 +41,9 @@ func Pac01(){
 	fmt.Println("第一个包")
 }
 ```
+
 - 使用方
+
 ```go
 package main
 
@@ -56,7 +60,7 @@ func main() {
 ```
 - 多层级
 
-  ![image-20200213113517970](assets/image-20200213113517970.png)
+![image-20200213113517970](assets/image-20200213113517970.png)
   
 ```go
 package main

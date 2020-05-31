@@ -6,6 +6,7 @@
 ## 异常定义
 - Go 语言通过内置的错误接口提供了非常简单的错误处理机制。
 - error 为接口
+
 ```go
 type error interface {
 	Error() string
@@ -13,6 +14,7 @@ type error interface {
 ```
 
 ## 异常的使用
+
 ```go
 func error02(x int) {
 	if x == 0 {
@@ -20,7 +22,9 @@ func error02(x int) {
 	}
 }
 ```
+
 - go 没有 `try{}catch{}finally{}` go 使用 `defer panic recover`处理
+
 ```go
 func error03() {
 	//捕获 + 处理
@@ -39,6 +43,7 @@ func error03() {
 ```
 
 ## 自定义异常
+
 ```go
 func error3(name string)(err error){
 	return errors.New(name)

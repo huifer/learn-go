@@ -5,6 +5,7 @@
 
 
 ## 语法
+
 ```go
 type name struct {
 }

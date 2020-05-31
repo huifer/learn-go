@@ -1,4 +1,10 @@
-- [基础语法](./docs/go_core/readme.md)
+- [基础语法](./README.md)
+    - [初识GO](./docs/go_core/认识GO.md)
+    - [GO基础语法](./docs/go_core/GO基础语法.md)
+    - [GO变量](./docs/go_core/GO变量.md)
+    - [GO数组](./docs/go_core/GO数组.md)
+    - [GO切片](./docs/go_core/GO切片.md)
+    - [GO字典](./docs/go_core/GO字典.md)
     - [函数](./docs/go_core/GO函数.md)
     - [GO包](./docs/go_core/GO包.md)
 - 数据库

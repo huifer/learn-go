@@ -275,6 +275,7 @@ PASS
 - 命令行模式下使用`go test -test.bench='.*'`进行单元测试
 ### 覆盖率测试
 - 命令行:`go test -cover`
+
 ```text
 PASS
 coverage: 2.4% of statements
