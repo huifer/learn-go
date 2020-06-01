@@ -266,20 +266,20 @@ if a > 0 {
 
 - `switch case `
 
-  ```go
-  func switchValue() {
-  	var sw = "a"
-  	switch sw {
-  	case "a", "c":
-  		fmt.Print(sw)
-  	case lang:
-  		fmt.Print(lang)
-  	default:
-  		fmt.Print("default")
-  	}
-  }
-  
-  ```
+```go
+func switchValue() {
+var sw = "a"
+switch sw {
+case "a", "c":
+    fmt.Print(sw)
+case lang:
+    fmt.Print(lang)
+default:
+    fmt.Print("default")
+}
+}
+
+```
 
   
 

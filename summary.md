@@ -5,6 +5,8 @@
     - [GO数组](./docs/go_core/GO数组.md)
     - [GO切片](./docs/go_core/GO切片.md)
     - [GO字典](./docs/go_core/GO字典.md)
+    - [GO struct](./docs/go_core/GO结构体.md)
+    - [GO 分支语句](docs/go_core/GO分支语句.md)
     - [函数](./docs/go_core/GO函数.md)
     - [GO包](./docs/go_core/GO包.md)
 - 数据库
