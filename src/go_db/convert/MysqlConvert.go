@@ -11,7 +11,6 @@ type column struct {
 	ColumnName string
 	Type       string
 	Nullable   string
-	Json       string
 }
 type mysqlConfig struct {
 	User   string
@@ -21,6 +20,7 @@ type mysqlConfig struct {
 	Port   int
 }
 
+// mysql 和 go 语言的类型对应表
 var go_mysql_typemap = map[string]string{
 	"int":                "int",
 	"integer":            "int",
@@ -73,6 +73,7 @@ func main() {
 		Port:   3306,
 	}
 	conn := config.User + ":" + config.Pwd + "@tcp(10.10.0.124:3306)/" + config.DbName
+	fmt.Println(conn)
 	if conn != "" {
 		db, err := sql.Open("mysql", conn)
 		if err != nil {
@@ -84,6 +85,7 @@ func main() {
 
 }
 
+// 获取所有列
 func getColumns(tablename string, db *sql.DB) (errr error, columns []column) {
 	if tablename != "" {
 		sql := query_sql + "and TABLE_NAME = '" + tablename + "'"
@@ -103,11 +105,6 @@ func getColumns(tablename string, db *sql.DB) (errr error, columns []column) {
 				return err, nil
 			}
 			col.Type = go_mysql_typemap[col.Type]
-			if col.Nullable == "YES" {
-				col.Json = fmt.Sprintf("`json:\"%s,omitempty\"`", col.Json)
-			} else {
-				col.Json = fmt.Sprintf("`json:\"%s\"`", col.Json)
-			}
 
 			columns = append(columns, col)
 		}
@@ -115,12 +112,12 @@ func getColumns(tablename string, db *sql.DB) (errr error, columns []column) {
 	return errr, columns
 }
 
+// 对象输出
 func model(table_name string, columns []column) {
 	depth := 1
-	fmt.Println("type " + table_name + " struct {\n")
-
+	fmt.Print("type " + table_name + " struct {\n")
 	for _, v := range columns {
-		fmt.Print(tab(depth) + v.ColumnName + " " + v.Type + " " + v.Json)
+		fmt.Print(tab(depth) + v.ColumnName + " " + v.Type)
 		fmt.Print("\n")
 	}
 
@@ -128,6 +125,7 @@ func model(table_name string, columns []column) {
 
 }
 
+// 输出 table
 func tab(depth int) string {
 	return strings.Repeat("\t", depth)
 }
