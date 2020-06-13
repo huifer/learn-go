@@ -1,5 +1,7 @@
 package structure
 
+import "fmt"
+
 // 用户结构
 type User struct {
 	Name string
@@ -16,6 +18,11 @@ type Student struct {
 	Pro      int
 }
 
+func (s User) print() {
+	fmt.Println(s)
+
+}
+
 func GetUser() *User {
 
 	u := User{Age: 1, Name: "huifer"}
@@ -26,4 +33,9 @@ func GetStudent() *Student {
 	user := GetUser()
 	s := Student{User: user, ClassNum: 10}
 	return &s
+}
+
+func TypeMethod() {
+	GetUser().print()
+
 }

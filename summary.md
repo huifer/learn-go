@@ -10,5 +10,7 @@
     - [函数](./docs/go_core/GO函数.md)
     - [GO包](./docs/go_core/GO包.md)
 - 数据库
+    - [go-mysql](./docs/go_db/mysql/go_use_mysql.md)
+        
 - web
 - 实战项目

@@ -305,6 +305,36 @@ ok      lern-go/src/function    0.338s
 
 
 
+## 类型函数
+- 类型函数(类型方法)的接受值是值类型或者指针
+
+```go
+func TypeNameMethod(t TypeName , params) (retunList){
+}
+
+func TypeNameMethod(t *TypeName , params) (retunList){
+}
+```
+
+
+````go
+type User struct {
+	Name string
+	Age  int
+	Pro  int
+}
+
+func TypeMethod()  {
+	GetUser().print()
+
+}
+````
+
+- 类型函数有如下特点
+    1. 为类型增加方法必须在一个包内,方法的定义和结构体的定义(类型的定义)必须在同一个包内
+    1. 接口不能增加方法
+    1。 不能为**预声明类型**增加方法
+    1. 类型函数的命名空间可见性和普通的变量、函数可见性一致,首字母大写外部包可以访问
 
 
 ## 练习
