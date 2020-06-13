@@ -55,14 +55,14 @@ func main() {
 		DbName:   "scrum",
 	}
 
-	//sql := "INSERT INTO `scrum`.`t_user`(`name`, `age`) VALUES (?, ?)"
-	//id, err := insert(conn(conf), sql)
-	//checkErr(err)
-	//sql = "select id , name ,age from t_user where id = ?"
-	//
-	//user := selectSql(conn(conf), sql, id)
-	//fmt.Println(user)
-	sql := "UPDATE `scrum`.`t_user` SET `age` = ? WHERE `id` = ?"
+	sql := "INSERT INTO `scrum`.`t_user`(`name`, `age`) VALUES (?, ?)"
+	id, err := insert(conn(conf), sql)
+	checkErr(err)
+	sql = "select id , name ,age from t_user where id = ?"
+
+	user := selectSql(conn(conf), sql, id)
+	fmt.Println(user)
+	sql = "UPDATE `scrum`.`t_user` SET `age` = ? WHERE `id` = ?"
 	upId, err := updateSql(conn(conf), sql, 3, 12)
 	checkErr(err)
 
