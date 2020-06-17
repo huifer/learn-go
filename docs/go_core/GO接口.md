@@ -76,3 +76,75 @@ func (Logger) Error(s string) {
 	fmt.Println("error: ", s)
 }
 ```
+
+## 类型断言
+- 语法 : `i.(TypeName)`
+    - 如果接口`i`是 TypeName 不会报错
+
+```go
+	ca1 := i.(Logger)
+	fmt.Println(ca1)
+    // 报错
+	ca2 := i.(string)
+	fmt.Println(ca2)
+```
+
+- 类型判断失败会抛出异常
+
+```text
+.\GoInterface.go:30:10: impossible type assertion:
+	string does not implement Printer (missing Error method)
+```
+
+- 类型判断使用
+
+```go
+package main
+
+import "fmt"
+
+type Printer interface {
+	Info(s string)
+	Error(s string)
+}
+
+type Logger struct{}
+
+func (Logger) Info(s string) {
+	fmt.Println("info: ", s)
+
+}
+
+func (Logger) Error(s string) {
+	fmt.Println("error: ", s)
+}
+
+type Oc interface {
+	Ic(s string)
+}
+
+type OcImp struct {
+
+}
+
+func (OcImp) Ic(s string) {
+	fmt.Println("oc", s)
+
+}
+
+func main() {
+	var i Printer
+
+	i = Logger{}
+
+
+	if o, ok := i.(Logger); ok {
+		o.Info("接口")
+	}
+	if o, ok := i.(Oc); ok {
+		o.Ic("okokokok")
+	}
+}
+
+```
+
