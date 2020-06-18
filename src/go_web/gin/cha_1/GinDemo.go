@@ -27,5 +27,11 @@ func main() {
 
 	r.GET("/go", controller.Function)
 
+	r.GET("/user/find", controller.Query)
+	r.GET("/user/find/:name", controller.Path)
+
+	r.POST("/user/form", controller.BodyForm)
+	r.POST("/user/json", controller.BodyJson)
+
 	r.Run(port)
 }
