@@ -15,8 +15,8 @@
         
 - web
     - gin   
-        - [初识](docs/go_web/gin/gin_初识.md)
-        - [请求参数(参数验证,参数绑定)]()
+        - [初识](./docs/go_web/gin/gin_初识.md)
+        - [请求参数(参数验证,参数绑定)](./docs/go_web/gin/gin_参数绑定.md)
         - 请求头
         - 返回值(不同类型的返回值)
         - 组路由(group route)
