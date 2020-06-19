@@ -9,7 +9,7 @@
     - [GO 分支语句](docs/go_core/GO分支语句.md)
     - [函数](./docs/go_core/GO函数.md)
     - [GO包](./docs/go_core/GO包.md)
-    - go_单例
+    - [go_单例](./docs/go_core/GO单例.md)
 - 数据库
     - [go-mysql](./docs/go_db/mysql/go_use_mysql.md)
         
@@ -17,6 +17,7 @@
     - gin   
         - [初识](./docs/go_web/gin/gin_初识.md)
         - [请求参数(参数验证,参数绑定)](./docs/go_web/gin/gin_参数绑定.md)
+        - [参数验证](./docs/go_web/gin/gin_参数验证.md)
         - 请求头
         - 返回值(不同类型的返回值)
         - 组路由(group route)

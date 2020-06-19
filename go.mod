@@ -11,7 +11,7 @@ require (
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/flosch/pongo2 v0.0.0-20200529170236-5abacdfa4915 // indirect
 	github.com/gin-gonic/gin v1.6.3
-	github.com/go-playground/validator/v10 v10.3.0 // indirect
+	github.com/go-playground/validator/v10 v10.3.0
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/gorilla/schema v1.1.0 // indirect
@@ -31,5 +31,6 @@ require (
 	go.mongodb.org/mongo-driver v1.3.4 // indirect
 	golang.org/x/sys v0.0.0-20200610111108-226ff32320da // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
+	gopkg.in/validator.v2 v2.0.0-20200605151824-2b28d334fa05
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
