@@ -1,4 +1,7 @@
 # ETCD
+> 作者: [HuiFer](https://github.com/huifer)
+>
+> 仓库地址: https://github.com/huifer/learn-go
 
 ## 核心特性
 1. 将数据存储在集群中的高可用 K-V 存储
@@ -303,3 +306,6 @@ func del(config clientv3.Config) {
 &{cluster_id:14841639068965178418 member_id:10276657743932975437 revision:8 raft_term:2  1 [] {} [] 0}
 
 ```
+
+
+#### 监听
