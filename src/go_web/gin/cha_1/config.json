@@ -1,0 +1,11 @@
+{
+  "data_base_config":{
+    "type":"mysql",
+    "local":"huifer:a12345@tcp(47.98.225.144:3306)/scrum?parseTime=true"
+  },
+  "server_config":{
+    "port":"9999",
+    "flag":1,
+    "tag":1
+  }
+}
