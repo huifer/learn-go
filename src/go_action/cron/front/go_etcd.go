@@ -19,8 +19,86 @@ func main() {
 	//putDemo(config)
 	//getDir(config, "/cron/jobs/")
 	//del(config)
-	watchDemo(config)
+	OptimisticLock(config)
 }
+
+// 乐观锁
+func OptimisticLock(config clientv3.Config) {
+	var (
+		leaseGrantResponse *clientv3.LeaseGrantResponse
+		err                error
+		keepResponse       *clientv3.LeaseKeepAliveResponse
+		ctx                context.Context
+		cancelFunc         context.CancelFunc
+	)
+	client, err := clientv3.New(config)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	//1. 上锁(创建租约)
+	lease := clientv3.NewLease(client)
+
+	// 创建十秒的租约
+	if leaseGrantResponse, err = lease.Grant(context.TODO(), 3); err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	leaseId := leaseGrantResponse.ID
+
+	// 取消租约的上下文
+	ctx, cancelFunc = context.WithCancel(context.TODO())
+	// 函数结束后,停止续租
+	defer cancelFunc()
+	// 主动释放,立即的
+	defer lease.Revoke(context.TODO(), leaseId)
+
+	alive, err := lease.KeepAlive(ctx, leaseId)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	go func() {
+		for {
+			select {
+			case keepResponse = <-alive:
+
+				if keepResponse == nil {
+					fmt.Println("租约失效")
+					goto END
+
+				} else {
+					fmt.Println("收到自动续约应答", keepResponse.ID)
+				}
+			}
+		END:
+		}
+	}()
+
+	kv := clientv3.NewKV(client)
+	// 事务
+	txn := kv.Txn(context.TODO())
+	// if key 不存在 then 设置 else 获取所失败
+	txn.If(clientv3.Compare(clientv3.CreateRevision("/cron/lock/job"), "=", 0)).Then(clientv3.OpPut("/cron/lock/job", "ddd", clientv3.WithLease(leaseId))).Else(clientv3.OpGet("/cron/lock/job"))
+	commit, err := txn.Commit()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	// 判断是否抢到
+	if !commit.Succeeded {
+		fmt.Println("锁被占用", string(commit.Responses[0].GetResponseRange().Kvs[0].Value))
+		return
+	}
+
+	//2. 业务
+	fmt.Println("处理业务")
+	time.Sleep(5 * time.Second)
+	// 3. 释放锁(取消自动续租,释放租约)
+
+}
+
 func watchDemo(config clientv3.Config) {
 	var (
 		watchResp clientv3.WatchResponse
