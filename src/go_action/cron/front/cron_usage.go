@@ -6,10 +6,6 @@ import (
 	"time"
 )
 
-func main() {
-	cronTable()
-}
-
 // 任务结构
 type CronJob struct {
 	// cron 表达式
